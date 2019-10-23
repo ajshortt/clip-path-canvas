@@ -1,7 +1,7 @@
 {
   "name": "clip-path-canvas",
-  "version": "1.0.0",
-  "description": "A small JS polyfill for clip-path usage on un-supported browsers'",
+  "version": "0.1.0",
+  "description": "A small JS polyfill for clip-path usage on un-supported browsers",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
