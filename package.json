@@ -1,0 +1,28 @@
+{
+  "name": "clip-path-canvas",
+  "version": "1.0.0",
+  "description": "A small JS polyfill for clip-path usage on un-supported browsers'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajshortt/clip-path-canvas.git"
+  },
+  "keywords": [
+    "clip-path",
+    "canvas",
+    "polyfill",
+    "fallback"
+  ],
+  "author": "AJ Shortt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajshortt/clip-path-canvas/issues"
+  },
+  "homepage": "https://github.com/ajshortt/clip-path-canvas#readme",
+  "dependencies": {
+    "ua-parser-js": "^0.7.20"
+  }
+}
