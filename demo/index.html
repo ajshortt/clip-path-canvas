@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ClipPathCanvas | JS fallback for the clip-path CSS attribute</title>
+    <script src="../dist/bundle.min.js"></script>
+    <style>
+        .original__img,
+        .original__mask,
+        .clip-path-css__img,
+        .clip-path-canvas__img {
+            width: 300px;
+        }
+
+        .clip-path-css__img,
+        .clip-path-canvas__img {
+            clip-path: url('#clip-path-mask-id');
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ClipPathCanvas</h1>
+        <hr>
+
+        <!-- Intro -->
+        <h2>Parts</h2>
+        <h3>The Mask</h3>
+        <img class="original__mask" src="./assets/mask.svg" alt="Mask">
+        <h3>An image</h3>
+        <img class="original__img" src="./assets/image.jpg" alt="Luke Skywalker">
+        <hr>
+
+        <!-- Using clip-path via CSS -->
+        <div>
+            <h2>Clip Path via CSS</h2>
+            <i>Supported by most browsers but try on Edge...👀</i>
+        </div>
+        <div class="clip-path-css">
+            <img class="clip-path-css__img" src="./assets/image.jpg" alt="Luke Skywalker">
+        </div>
+        <hr>
+
+
+        <!-- Using clip-path via CSS -->
+        <div>
+            <h2>Clip Path via ClipPathCanvas</h2>
+        </div>
+        <div class="clip-path-canvas" id="clip-path-canvas-wrapper">
+            <img class="clip-path-canvas__img" src="./assets/image.jpg" alt="Luke Skywalker">
+        </div>
+
+        <!-- The masks are typically hidden visually -->
+        <div class="masks">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="597"
+                height="891"
+                viewBox="0 0 597 891"
+            >
+                <defs>
+                    <clipPath
+                        id="clip-path-mask-id"
+                        clipPathUnits="objectBoundingBox"
+                        transform="scale(0.00558 0.00555)"
+                    >
+                        <path d="M0,0v891h597L385.4,418.2L585.6,0H0z"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+    </div>
+
+    <script>
+        var wrapper = document.getElementById('clip-path-canvas-wrapper');
+        ClipPathCanvas(wrapper, 'clip-path-mask-id');
+    </script>
+</body>
+</html>

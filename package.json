@@ -4,7 +4,8 @@
   "description": "A small JS polyfill for clip-path usage on un-supported browsers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,14 @@
   },
   "homepage": "https://github.com/ajshortt/clip-path-canvas#readme",
   "dependencies": {
-    "ua-parser-js": "^0.7.20"
+    "bowser": "^2.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "rollup": "^1.25.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
   }
 }
