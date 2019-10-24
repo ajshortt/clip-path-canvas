@@ -52,21 +52,26 @@
             <img class="clip-path-canvas__img" src="./assets/image.jpg" alt="Luke Skywalker">
         </div>
 
+        <div class="clip-path-canvas" id="clip-path-canvas-wrapper-two">
+            <img class="clip-path-canvas__img" src="./assets/image.jpg" alt="Luke Skywalker">
+        </div>
+
         <!-- The masks are typically hidden visually -->
         <div class="masks">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="597"
-                height="891"
-                viewBox="0 0 597 891"
+                width="179"
+                height="180"
+                viewBox="0 0 179 180"
             >
                 <defs>
                     <clipPath
                         id="clip-path-mask-id"
+                        id="svg-path-k"
                         clipPathUnits="objectBoundingBox"
                         transform="scale(0.00558 0.00555)"
                     >
-                        <path d="M0,0v891h597L385.4,418.2L585.6,0H0z"/>
+                        <path d="M0 .674v178.952h178.667l-63.33-94.968L175.247.674z" />
                     </clipPath>
                 </defs>
             </svg>
@@ -75,7 +80,9 @@
 
     <script>
         var wrapper = document.getElementById('clip-path-canvas-wrapper');
+        var wrapperTwo = document.getElementById('clip-path-canvas-wrapper-two');
         ClipPathCanvas(wrapper, 'clip-path-mask-id');
+        ClipPathCanvas(wrapperTwo, 'clip-path-mask-id');
     </script>
 </body>
 </html>
