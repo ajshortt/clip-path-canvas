@@ -98,6 +98,12 @@ ClipPathCanvas(wrapper, 'clip-path-mask-id');
 
 ## Development
 
+### Roadmap
+- 🔥 Add custom user agent sniffer to decrease distribution payload weight
+- 🔥 Add full un-supported list of browsers
+- 🔥 Add linting & unit tests
+- ⚠️ Add target element by string functionality
+
 ### Contribute
 
 * Submit an issue in the issues section of the Github repo
