@@ -1,58 +1,129 @@
 # ClipPathCanvas.js
 
-Description coming soon
+Do you enjoy using the SVG masks with `clip-path` CSS attribute on images in your web pages/applications? Annoyed that some browsers still doesn't support the attribute? [https://caniuse.com/#feat=css-clip-path](https://caniuse.com/#feat=css-clip-path). Well now you can allow users from all un-supported browsers
+enjoy you the visual qualities of your site with `ClipPathCanvas`.
 
-Build Status Coming soon
+Simply put, this package will detect if the current browser cannot support `clip-path` then mimics the style by replacing the image with a canvas replica whilst retaining the style and other attributes on the initial image element.
+
 
 * Author    : Alex Shortt <<hello@alex-shortt.com>>
-* Demo      : Coming soon
 * Source    : https://github.com/ajshortt/clip-path-canvas
 
-# Installaltion
+## Installaltion
 
-## NPM
+### NPM
 
 ```sh
 $ npm install clip-path-canvas
 ```
 
-## Yarn
+### Yarn
 
 ```sh
 $ yarn add clip-path-canvas
 ```
 
-## Using CDN
+### Import
+If you are using a bundler, import the package to your application like so:
+```javascript
+import convertClipPath from 'clip-path-canvas';
+```
 
-Coming Soon
+### Script
+If you want to add the script directly, add the following to your HTML:
+```javascript
+<script src="path/to/clip-path-canvas/dist/clip-path-canvas.min.js"></script>
+```
 
-# Usage
+## Usage
 
-Coming soon
+### Example HTML
+You need to mame sure the image that you want to clip has a parent container element which is required by ClipPathCanvas to
+create the fallback canvas.
+```html
+<div id="clip-path-wrapper">
+    <img class="clip-path-image" src="..." alt="...">
+</div>
+```
 
-# Development
+### Example SVG Mask
+You will obviously need your SVG mask within your markup. It is recommended that you hide the mask visually as it is simply referenced by
+CSS to create the clip-path. Make sure the SVG internal definitions e.g a `path` is wrapped in a `clipPath` element with the corresponding id
+which the CSS references when creating the clip-path.
+```html
+<div class="masks">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="180"
+        height="180"
+        viewBox="0 0 180 180"
+    >
+        <defs>
+            <clipPath
+                id="clip-path-mask-id"
+                clipPathUnits="objectBoundingBox"
+                transform="scale(0.00558 0.00555)"
+            >
+                <path d="M0 .674v178.952h178.667l-63.33-94.968L175.247.674z" />
+            </clipPath>
+        </defs>
+    </svg>
+</div>
+```
 
-## Contribute
+### Example CSS (prior to ClipPathCanvas usage)
+```css
+.clip-path-image {
+    clip-path: url('#clip-path-mask-id');
+}
 
+/* Make sure to visually hide the SVG mask */
+.masks {
+    max-height: 0;
+    max-width: 0;
+    overflow: hidden;
+}
+```
+
+Great, this looks sweet...but not on unsupported browsers. In steps `ClipPathCanvas`!
+
+### ClipPathCanvas usage
+```javascript
+// Get the wrapping element
+var wrapper = document.getElementById('clip-path-canvas-wrapper');
+
+// Run ClipPathCanvas passing in the wrapping element and the ID of the desired mask
+ClipPathCanvas(wrapper, 'clip-path-mask-id');
+```
+
+## Development
+
+### Contribute
+
+* Submit an issue in the issues section of the Github repo
 * Fork and clone this repository
-* Make some changes as required
-* ~Write a unit test to showcase your feature~ coming soon
-* ~Run the test suites to make sure the changes you made didn't break anything `$ npm run test`~ coming soon
+* Make some changes as required on a branch `change/#{issue-id}` e.g `change/#123`
+* ~~Write a unit test for your change~~ coming soon
+* ~~Run the test suites to confirm none braking code `$ npm run test`~~ coming soon
 * Commit and push to your own repository
-* Submit a pull request to this repository under `develop` branch
+* Submit a pull request to this repository to the `development` branch
 
-## Build
+### Build
 
-How to build coming Soon
+```sh
+$ cd /path/to/local/clip-path-canvas
+$ npm install
+$ npm run build
+```
 
-# Donate
+## Donate
 
 All donations welcome
 
 [![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/ajshortt)
 
 
-# License
+## License
 
 MIT License
 
