@@ -38,7 +38,7 @@ If you want to add the script directly, add the following to your HTML:
 ## Usage
 
 ### Example HTML
-You need to mame sure the image that you want to clip has a parent container element which is required by ClipPathCanvas to
+You need to make sure the image that you want to clip has a parent container element which is required by ClipPathCanvas to
 create the fallback canvas.
 ```html
 <div id="clip-path-wrapper">
