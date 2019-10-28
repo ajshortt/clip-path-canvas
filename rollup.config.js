@@ -5,7 +5,7 @@ import commonjs from 'rollup-plugin-commonjs';
 export default {
     input: 'index.js',
     output: {
-        file: './dist/bundle.min.js',
+        file: './dist/clip-path-canvas.min.js',
         format: 'iife',
         name: 'ClipPathCanvas',
         globals: {
