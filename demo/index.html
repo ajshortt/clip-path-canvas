@@ -10,13 +10,19 @@
         .original__img,
         .original__mask,
         .clip-path-css__img,
+        .clip-path-none-svg__img,
         .clip-path-canvas__img {
+            height: 447px;
             width: 300px;
         }
 
         .clip-path-css__img,
         .clip-path-canvas__img {
             clip-path: url('#clip-path-mask-id');
+        }
+
+        .clip-path-none-svg__img {
+            clip-path: circle(50%);
         }
     </style>
 </head>
@@ -54,6 +60,15 @@
 
         <div class="clip-path-canvas" id="clip-path-canvas-wrapper-two">
             <img class="clip-path-canvas__img" src="./assets/image.jpg" alt="Luke Skywalker">
+        </div>
+        <hr>
+
+        <!-- Using clip-path via CSS -->
+        <div>
+            <h2>Clip Path via ClipPathCanvas (none SVG base)</h2>
+        </div>
+        <div class="clip-path-canvas" id="clip-path-canvas-wrapper-three">
+            <img class="clip-path-none-svg__img" src="./assets/image.jpg" alt="Luke Skywalker">
         </div>
 
         <!-- The masks are typically hidden visually -->
