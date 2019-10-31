@@ -1,5 +1,8 @@
 # ClipPathCanvas.js
+[![npm version](https://img.shields.io/npm/v/clip-path-canvas)](https://npmjs.org/package/clip-path-canvas "View this project on npm")
 [![Build Status](https://travis-ci.com/ajshortt/clip-path-canvas.svg?branch=master)](https://travis-ci.com/ajshortt/clip-path-canvas)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+
 
 Do you enjoy using the SVG masks with `clip-path` CSS attribute on images in your web pages/applications? Annoyed that some browsers still doesn't support the attribute? [https://caniuse.com/#feat=css-clip-path](https://caniuse.com/#feat=css-clip-path). Well now you can allow users from all un-supported browsers
 enjoy you the visual qualities of your site with `ClipPathCanvas`.
