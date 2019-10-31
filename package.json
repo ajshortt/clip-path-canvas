@@ -1,10 +1,10 @@
 {
   "name": "clip-path-canvas",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "A small JS polyfill for clip-path usage on un-supported browsers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "rollup -c"
   },
   "repository": {
@@ -29,6 +29,7 @@
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
+    "jest": "^24.9.0",
     "rollup": "^1.25.2",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-babel-minify": "^9.1.0",

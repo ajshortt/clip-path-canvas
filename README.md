@@ -1,4 +1,5 @@
 # ClipPathCanvas.js
+[![Build Status](https://travis-ci.com/ajshortt/clip-path-canvas.svg?branch=master)](https://travis-ci.com/ajshortt/clip-path-canvas)
 
 Do you enjoy using the SVG masks with `clip-path` CSS attribute on images in your web pages/applications? Annoyed that some browsers still doesn't support the attribute? [https://caniuse.com/#feat=css-clip-path](https://caniuse.com/#feat=css-clip-path). Well now you can allow users from all un-supported browsers
 enjoy you the visual qualities of your site with `ClipPathCanvas`.
@@ -38,7 +39,7 @@ If you want to add the script directly, add the following to your HTML:
 ## Usage
 
 ### Example HTML
-You need to mame sure the image that you want to clip has a parent container element which is required by ClipPathCanvas to
+You need to make sure the image that you want to clip has a parent container element which is required by ClipPathCanvas to
 create the fallback canvas.
 ```html
 <div id="clip-path-wrapper">
